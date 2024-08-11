@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>DIZAYNI Bill</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="../JS/bill.js"></script>
+</head>
+
+<body>
+    <div class="card" style="max-width: fit-content; align-items: center;">
+        <div class=" card-body">
+            <div class="container mb-5 mt-3">
+                <!-- <div class="row d-flex align-items-baseline">
+                    <div class="col-xl-9">
+                        <p style="color: #7e8d9f;font-size: 20px;">Bill No: <strong >123</strong></p>
+                    </div>
+                    <div class="col-xl-3 float-end">
+                        <a class="btn btn-light text-capitalize border-0" data-mdb-ripple-color="dark"><i
+                                class="fas fa-print text-primary"></i> Print</a>
+                        <a class="btn btn-light text-capitalize" data-mdb-ripple-color="dark"><i
+                                class="far fa-file-pdf text-danger"></i> Export</a>
+                    </div>
+                    <hr>
+                </div> -->
+
+                <div class="container">
+                    <div class="col-md-12">
+                        <div class="text-center">
+                            <i class="fab fa-mdb fa-4x ms-0" style="color:#5d9fc5 ;"></i>
+                            <h3 class="pt-0">DIZAYNI SHOP</h3>
+                        </div>
+
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-xl-8">
+                            <ul class="list-unstyled">
+                                <li class="text-muted">Address: </li>
+                                <li class="text-muted">Al MAHED Street, Bethlehem,</li>
+                                <li class="text-muted">Palestine</li>
+                                <li class="text-muted"><i class="fas fa-phone"></i> 059******</li>
+                            </ul>
+                        </div>
+                        <div class="col-xl-4">
+                            <h5 class="text-muted">Invoice</h5>
+                            <ul class="list-unstyled">
+                                <li class="text-muted"><i class="fas fa-circle" style="color:#84B0CA ;"></i> <span
+                                        class="fw-bold">Bill No:</span><span id="bill_number"></span></li>
+                                <li class="text-muted"><i class="fas fa-circle" style="color:#84B0CA ;"></i>
+                                    <span class="fw-bold">Creation Date: </span>
+                                    <span id="date"></span>
+                                    <script>
+                                        const today = new Date(Date.now());
+                                        $("#date").html(today.toUTCString("yyyy Mmm dd"))
+                                    </script>
+                                </li>
+                                <!-- <li class="text-muted"><i class="fas fa-circle" style="color:#84B0CA ;"></i> <span
+                                        class="me-1 fw-bold">Status:</span><span
+                                        class="badge bg-warning text-black fw-bold"> Unpaid</span></li> -->
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="row my-2 mx-1 justify-content-center">
+                        <table class="table table-striped table-borderless">
+                            <thead style="background-color:#84B0CA ;" class="text-white">
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Item Names</th>
+                                    <th scope="col">Qty</th>
+                                    <th scope="col">Unit Price</th>
+                                    <th scope="col">Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody id="productTable"></tbody>
+                        </table>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-8">
+                            <ul class="list-unstyled">
+                                <li class="text-muted ms-3"><span class="text-black me-md-5">SubTotal</span><span
+                                        id="subtotal"></span> Nis</li>
+                                <li class="text-muted ms-3 mt-2"><span class="text-black me-4">Tax(12.5%)</span><span
+                                        id="tax_amount"></span> Nis</li>
+                            </ul>
+                            <p class="text-black float-start"><span class="text-black me-3">Total Amount</span><span
+                                    style="font-size: 25px;" id="total"></span> Nis</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-xl-9">
+                            <p>Thank you for your purchase from DIZAYNI</p>
+                        </div>
+                        <div class="col-xl-3">
+                            <button type="button" class="btn btn-primary text-capitalize"
+                                style="background-color:#60bdf3 ;" id="printBill">Print Now</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
