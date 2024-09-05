@@ -1,5 +1,7 @@
 
 # POS-Tastic
+ 
+![POS](https://github.com/user-attachments/assets/9ec230d8-c8a5-4419-b276-15f02169b2e3)
 
 This is a small implementation of a POS system for the course Software Products Management - SWER 411
 
